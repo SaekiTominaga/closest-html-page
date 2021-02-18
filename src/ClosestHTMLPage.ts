@@ -7,7 +7,7 @@ export default class {
 	#mimeTypes: DOMParserSupportedType[]; // 取得するリソースの MIME
 	#maxFetchCount: number; // fetch() の最大試行回数
 
-	#fetchedResponses: Set<Response> = new Set(); // fetch() した Response 情報
+	#fetchedResponses = new Set<Response>(); // fetch() した Response 情報
 
 	/* もっとも近い祖先階層の HTML ページのデータ */
 	#url: string | null = null; // URL
